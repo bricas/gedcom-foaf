@@ -6,7 +6,25 @@ Gedcom::FOAF - Output FOAF files from Gedcom individuals and families
 
 =head1 SYNOPSIS
 
+	use Gedcom;
+	use Gedcom::FOAF;
+	
+	my $gedcom = Gedcom->new( gedcom_file => 'myfamily.ged' );
+	my $i = $gedcom->get_individual( 'Butch Cassidy' );
+	
+	# print the individual's FOAF
+	print $i->as_foaf;
+	
+	my( $f ) = $i->famc;
+	
+	# print the individual's family's (as a child) FOAF
+	print $f->as_foaf;
+
 =head1 DESCRIPTION
+
+This module provides C<as_foaf> methods to individual and family
+records. The resulting files can be parsed and crawled (scuttered)
+by any code that understands the FOAF and RDF specs.
 
 =head1 METHODS
 
@@ -17,7 +35,7 @@ use warnings;
 
 use XML::LibXML;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my %namespaces = (
 	rdf  => 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
@@ -229,17 +247,17 @@ sub as_foaf {
 	$type->setAttribute( 'rdf:resource' => 'http://xmlns.com/wordnet/1.6/Family' );
 	$group->appendChild( $type );
 
-	foreach my $event( $self->get_record( 'marriage' ) ) {
+	foreach my $event( $self->marriage ) {
 		my $bioevent = $xml->createElement( 'bio:event' );
 		my $marriage = $xml->createElement( 'bio:Marriage' );
 
-                if( my $datevalue = $event->get_value( 'date' ) ) {
+                if( my $datevalue = $event->date ) {
 			my $date = $xml->createElement( 'bio:date' );
 			$date->appendText( $datevalue );
 			$marriage->appendChild( $date );
                 }
 
-                if( my $placevalue = $event->get_value( 'place' ) ) {
+                if( my $placevalue = $event->place ) {
 			my $place = $xml->createElement( 'bio:place' );
 			$place->appendText( $placevalue );
 			$marriage->appendChild( $place );
