@@ -1,0 +1,14 @@
+Build.PL
+Changes
+lib/Gedcom/FOAF.pm
+MANIFEST			This list of files
+META.yml
+t/01-use.t
+t/10-family.t
+t/20-individual.t
+t/98-pod_coverage.t
+t/99-pod.t
+t/data/F45.xml
+t/data/I72.xml
+t/data/royal.ged
+t/data/royal.ged.index
