@@ -9,7 +9,8 @@ my $build = Module::Build->new(
 	create_readme      => 1,
 	create_makefile_pl => 'traditional',
 	requires           => {
-		'XML::LibXML'      => 0
+		'Gedcom'      => 0,
+		'XML::LibXML' => 0
 	},
 	build_requires     => {
 		'Test::More'  => 0,

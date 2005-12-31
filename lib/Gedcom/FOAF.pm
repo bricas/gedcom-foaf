@@ -35,7 +35,7 @@ use warnings;
 
 use XML::LibXML;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 my %namespaces = (
 	rdf  => 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',

@@ -1,5 +1,8 @@
 Revision history for Perl extension Gedcom::FOAF.
 
+0.03  Fri Dec 30 2005
+	- updated deps
+
 0.02  Thu Dec 08 2005
 	- pod updates
 	- use public methods instead of get_record /
