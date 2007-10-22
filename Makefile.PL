@@ -8,7 +8,7 @@ name 'Gedcom-FOAF';
 all_from 'lib/Gedcom/FOAF.pm';
 
 requires 'Gedcom';
-requires 'XML::LibXML'
+requires 'XML::LibXML';
 
 requires 'Test::More';
 
