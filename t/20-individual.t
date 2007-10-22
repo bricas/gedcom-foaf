@@ -5,8 +5,8 @@ use Gedcom;
 use File::Slurp;
 
 my $gedcom = Gedcom->new(
-	gedcom_file => 't/data/royal.ged',
-	read_only   => 1,
+    gedcom_file => 't/data/royal.ged',
+    read_only   => 1,
 );
 
 isa_ok( $gedcom, 'Gedcom' );
