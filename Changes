@@ -1,5 +1,8 @@
 Revision history for Perl extension Gedcom::FOAF.
 
+0.04  Tue Feb 05 2008
+    - Fix for unknown date and place for events (RT #30226)
+
 0.03  Mon Oct 22 2007
     - updated deps
     - switch to module::install
