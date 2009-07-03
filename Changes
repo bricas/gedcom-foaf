@@ -1,6 +1,7 @@
 Revision history for Perl extension Gedcom::FOAF.
 
 0.05  XXX
+    - Allow the user to supply url templates rather than a base url
 
 0.04  Tue Feb 05 2008
     - Fix for unknown date and place for events (RT #30226)

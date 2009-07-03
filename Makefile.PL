@@ -12,5 +12,4 @@ requires 'XML::LibXML';
 
 test_requires 'Test::More';
 
-auto_install;
 WriteAll;

@@ -11,10 +11,10 @@
   </foaf:Group>
   <foaf:Person rdf:about="I72.xml#I72">
     <foaf:name>James Robert Bruce Ogilvy</foaf:name>
-    <rdfs:seeAlso rdf:resource="I72.xml"/>
+    <rdfs:seeAlso rdf:resource="I72.xml#I72"/>
   </foaf:Person>
   <foaf:Person rdf:about="I73.xml#I73">
     <foaf:name>Julia Rawlinson</foaf:name>
-    <rdfs:seeAlso rdf:resource="I73.xml"/>
+    <rdfs:seeAlso rdf:resource="I73.xml#I73"/>
   </foaf:Person>
 </rdf:RDF>
