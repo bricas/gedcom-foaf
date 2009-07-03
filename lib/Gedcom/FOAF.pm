@@ -35,7 +35,7 @@ use warnings;
 
 use XML::LibXML;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 my %namespaces = (
     rdf  => 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
@@ -142,7 +142,7 @@ sub _foaf_event {
     my $date  = XML::LibXML::Element->new( 'bio:date' );
     my $place = XML::LibXML::Element->new( 'bio:place' );
 
-    $date->appendText( $self->get_value( "$name date" ) || 'UNKNOWN' );
+    $date->appendText( $self->get_value( "$name date" )   || 'UNKNOWN' );
     $place->appendText( $self->get_value( "$name place" ) || 'UNKNOWN' );
 
     $type->appendChild( $date );
@@ -317,7 +317,7 @@ Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2008 by Brian Cassidy
+Copyright 2005-2009 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
