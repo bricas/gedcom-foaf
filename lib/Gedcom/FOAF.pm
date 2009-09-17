@@ -104,7 +104,7 @@ the url templates as described above to suit your needs.
 sub as_foaf {
     my $self = shift;
     my $opts = Gedcom::FOAF::_prep_opts( shift );
-    my $xml  = XML::LibXML::Document->new( '1.0', 'UTF8' );
+    my $xml  = XML::LibXML::Document->new( '1.0', 'UTF-8' );
 
     my $rdf = $xml->createElement( 'RDF' );
 
@@ -263,7 +263,7 @@ the url templates as described above to suit your needs.
 sub as_foaf {
     my $self = shift;
     my $opts = Gedcom::FOAF::_prep_opts( shift );
-    my $xml  = XML::LibXML::Document->new( '1.0', 'UTF8' );
+    my $xml  = XML::LibXML::Document->new( '1.0', 'UTF-8' );
 
     my $rdf = $xml->createElement( 'RDF' );
 
